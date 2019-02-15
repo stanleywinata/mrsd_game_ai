@@ -21,6 +21,7 @@ namespace mrsd
 			 * Construct Player and add to game.
 			 */
 			void createPlayer(Game& g);
+
 		private:
 			Player* p;
 			float currentTime;
