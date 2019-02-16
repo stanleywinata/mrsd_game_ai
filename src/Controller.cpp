@@ -42,7 +42,6 @@ namespace mrsd
         if(pred.x < 0 ){
             pred.x = 0;
         }
-        std::cout<<p.vy;
 		return pred;
 	}
 
@@ -54,6 +53,7 @@ namespace mrsd
 		{
             Prediction pred = trackProjectile(*it,g);
             if(pred.t<1){
+                std::cout<<pred.x<<"\n\n";
                 for(int i = std::floor(pred.x-g.explosionSize);i<=std::ceil(pred.x+g.explosionSize);i++)
                 {
                     safespot[i] = 0;                
