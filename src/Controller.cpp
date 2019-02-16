@@ -42,6 +42,7 @@ namespace mrsd
         if(pred.x < 0 ){
             pred.x = 0;
         }
+        std::cout<<p.vy;
 		return pred;
 	}
 
