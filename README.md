@@ -2,12 +2,12 @@
 
 ## Question 1: How does the AI work
 
-The AI works in 3 steps. The first step was predicting where the projectiles would land found in trackProjectile. It does it by calculating it through the equation of motion for constant acceleration:
-s = ut + ½ at^2
-½ at2+ut-s =0
-substituting in values and solving for quadratic equation and considering time cannot be negative:
-t = (vy+√( vy^2+4*4.905*y))/9.81
-x = x0 + vx*t
+The AI works in 3 steps. The first step was predicting where the projectiles would land found in trackProjectile. It does it by calculating it through the equation of motion for constant acceleration:<br />
+s = ut + ½ at^2<br />
+½ at2+ut-s =0<br />
+substituting in values and solving for quadratic equation and considering time cannot be negative:<br />
+t = (vy+√( vy^2+4*4.905*y))/9.81<br />
+x = x0 + vx*t<br />
 After predicting when and where the projectiles would go to, it will combine those information with the information received from the getExplosion method to determine which area will be safe to go to, found in determineSafeSpots. After getting all the spots that are safe, it picks the spot to go to by seeing which spots are closest to the current positions, found in pickSafeSpot. Then it will move to the desired position by checking if the desired position is more to the left or to the right of the current position, and then it will send the velocity of the movement in that direction. 
 
 ## Question 2: Challenges
