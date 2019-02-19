@@ -31,8 +31,8 @@ int main(void)
 
 	//Setup Scenario
 	// setupScenarioEasy(g);
-	// setupScenarioMedium(g);
-    setupScenarioMedium(g);
+	setupScenarioMedium(g);
+    // setupScenarioMedium(g);
     std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 	std::chrono::milliseconds wait(1000/60);
 	time(&begin);

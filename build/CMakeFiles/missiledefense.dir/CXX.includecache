@@ -1029,8 +1029,6 @@ algorithm
 -
 typeinfo
 -
-eigen3/Eigen/Dense
--
 
 /home/stanley/CMU/SEM2/MRSD/Programming_Familiarization_Part_1-1/Task4P1/src/GLMesh.cpp
 GLMesh.h
