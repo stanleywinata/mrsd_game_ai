@@ -78,9 +78,10 @@ namespace mrsd
   //                   safespot[idx] = 0;                
   //               }
   //           }
-        return safespot;
+        }
+            return safespot;
 		}
-	}
+	
 
 	int Controller::pickSafeSpot(const Game& g)
 	{
