@@ -5,6 +5,7 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <time.h>
 using namespace mrsd;
 
 void setupScenarioEasy(Game&);
@@ -16,6 +17,7 @@ void setupScenarioImpossible(Game&);
 
 int main(void)
 {
+	time_t begin,end;
 	std::cout << "Usage:" << std::endl <<
 		"Press 'C' to spawn an AI Controlled player" << std::endl <<
 		"Press 'Space' to spawn a User Controlled player" << std::endl <<
@@ -28,10 +30,12 @@ int main(void)
 	glfe.enemyScale = 3.f;
 
 	//Setup Scenario
-	setupScenarioEasy(g);
-	// setupScenarioHard(g);
+	// setupScenarioEasy(g);
+	// setupScenarioMedium(g);
+    setupScenarioMedium(g);
     std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 	std::chrono::milliseconds wait(1000/60);
+	time(&begin);
 	while(!glfe.shouldClose(g))
 	{
 		g.tick();
@@ -43,6 +47,8 @@ int main(void)
 		start += wait;
 		std::this_thread::sleep_until(start);
 	}
+	time(&end);
+	std::cout<<"Time Finished: "<<difftime(end,begin)<<"seconds";
 	glfe.finish(g);
 	return 0;
 }

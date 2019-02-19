@@ -32,21 +32,21 @@ class Game
 	float explosionSize;
 	float explosionTime;
 	float playerSpeed;
-	private:
-		bool tickProjectile(Projectile& p);
+    private:
+	    int w, h;
+	    float gravity;
+	    float time;
+        bool tickProjectile(Projectile& p);
 		bool tickExplosion(Explosion& e);
 		bool tickPlayer(Player& p);
 		bool tickEnemy(Enemy& e);
 		void explode(float x);
 		int *dangerZone;
-		int w, h;
-		float gravity;
-		float time;
 		float timestep;
 		std::vector<Player*> players;
 		std::vector<Enemy> enemies;
-		std::list<Projectile> projectiles;
 		std::list<Explosion> explosions;
+	    std::list<Projectile> projectiles;
 };
 
 }
